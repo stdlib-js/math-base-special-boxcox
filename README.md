@@ -133,6 +133,22 @@ for ( i = 0; i < x.length; i++ ) {
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/math/base/special/boxcoxinv`][@stdlib/math/base/special/boxcoxinv]: compute the inverse of a one-parameter Box-Cox transformation.
+-   [`@stdlib/math/base/special/boxcox1p`][@stdlib/math/base/special/boxcox1p]: compute a one-parameter Box-Cox transformation of 1+x.
+-   [`@stdlib/math/base/special/boxcox1pinv`][@stdlib/math/base/special/boxcox1pinv]: compute the inverse of a one-parameter Box-Cox transformation for 1+x.
+
+</section>
+
+<!-- /.related -->
+
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 
@@ -191,6 +207,16 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-base-special-boxcox/main/LICENSE
 
 [box-cox-transformation]: https://en.wikipedia.org/wiki/Power_transform#Box-Cox_transformation
+
+<!-- <related-links> -->
+
+[@stdlib/math/base/special/boxcoxinv]: https://github.com/stdlib-js/math-base-special-boxcoxinv
+
+[@stdlib/math/base/special/boxcox1p]: https://github.com/stdlib-js/math-base-special-boxcox1p
+
+[@stdlib/math/base/special/boxcox1pinv]: https://github.com/stdlib-js/math-base-special-boxcox1pinv
+
+<!-- </related-links> -->
 
 </section>
 
