@@ -45,38 +45,30 @@ The one-parameter [Box-Cox transformation][box-cox-transformation] is defined as
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-boxcox
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-boxcox = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var boxcox = require( 'path/to/vendor/umd/math-base-special-boxcox/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.boxcox;
-})();
-</script>
+var boxcox = require( '@stdlib/math-base-special-boxcox' );
 ```
 
 #### boxcox( x, lambda )
@@ -115,14 +107,9 @@ v = boxcox( 0.0, -1.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-incrspace@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var incrspace = require( '@stdlib/array-base-incrspace' );
+var boxcox = require( '@stdlib/math-base-special-boxcox' );
 
 var x = incrspace( -1.0, 10.0, 1.0 );
 var l = incrspace( -0.5, 5.0, 0.5 );
@@ -136,11 +123,6 @@ for ( i = 0; i < x.length; i++ ) {
         console.log( 'boxcox(%d, %d) = %d', x[ i ], l[ j ], b );
     }
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -248,11 +230,11 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/boxcoxinv]: https://github.com/stdlib-js/math-base-special-boxcoxinv/tree/umd
+[@stdlib/math/base/special/boxcoxinv]: https://github.com/stdlib-js/math-base-special-boxcoxinv
 
-[@stdlib/math/base/special/boxcox1p]: https://github.com/stdlib-js/math-base-special-boxcox1p/tree/umd
+[@stdlib/math/base/special/boxcox1p]: https://github.com/stdlib-js/math-base-special-boxcox1p
 
-[@stdlib/math/base/special/boxcox1pinv]: https://github.com/stdlib-js/math-base-special-boxcox1pinv/tree/umd
+[@stdlib/math/base/special/boxcox1pinv]: https://github.com/stdlib-js/math-base-special-boxcox1pinv
 
 <!-- </related-links> -->
 
