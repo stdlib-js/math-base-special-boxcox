@@ -56,14 +56,32 @@ The one-parameter [Box-Cox transformation][box-cox-transformation] is defined as
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-boxcox
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import boxcox from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@deno/mod.js';
+var boxcox = require( '@stdlib/math-base-special-boxcox' );
 ```
 
 #### boxcox( x, lambda )
@@ -103,8 +121,8 @@ v = boxcox( 0.0, -1.0 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import incrspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-incrspace@deno/mod.js';
-import boxcox from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@deno/mod.js';
+var incrspace = require( '@stdlib/array-base-incrspace' );
+var boxcox = require( '@stdlib/math-base-special-boxcox' );
 
 var x = incrspace( -1.0, 10.0, 1.0 );
 var l = incrspace( -0.5, 5.0, 0.5 );
@@ -123,6 +141,99 @@ for ( i = 0; i < x.length; i++ ) {
 </section>
 
 <!-- /.examples -->
+
+<!-- C interface documentation. -->
+
+* * *
+
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/boxcox.h"
+```
+
+#### stdlib_base_boxcox( x, lambda )
+
+Computes a one-parameter [Box-Cox transformation][box-cox-transformation].
+
+```c
+double out = stdlib_base_boxcox( 1.0, 2.5 );
+// returns 0.0
+
+out = stdlib_base_boxcox( 4.0, 2.5 );
+// returns 12.4
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+-   **lambda**: `[in] double` power parameter.
+
+```c
+double stdlib_base_boxcox ( const double x, const double lambda );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/boxcox.h"
+#include <stdio.h>
+
+int main( void ) {
+    const double x[] = { -1.0, 10.0, 1.0 };
+    const double y[] = { -0.5, 5.0, 0.5 };
+
+    double out;
+    int i;
+    int j;
+    for ( i = 0; i < 3; i++ ) {
+        for ( j = 0; j < 3; j++ ){
+            out = stdlib_base_boxcox( x[ i ], y[ j ] );
+            printf ( "x: %lf, y: %lf, out: %lf\n", x[ i ], y[ j ], out );
+        }
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -161,7 +272,7 @@ for ( i = 0; i < x.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -228,11 +339,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/boxcoxinv]: https://github.com/stdlib-js/math-base-special-boxcoxinv/tree/deno
+[@stdlib/math/base/special/boxcoxinv]: https://github.com/stdlib-js/math-base-special-boxcoxinv
 
-[@stdlib/math/base/special/boxcox1p]: https://github.com/stdlib-js/math-base-special-boxcox1p/tree/deno
+[@stdlib/math/base/special/boxcox1p]: https://github.com/stdlib-js/math-base-special-boxcox1p
 
-[@stdlib/math/base/special/boxcox1pinv]: https://github.com/stdlib-js/math-base-special-boxcox1pinv/tree/deno
+[@stdlib/math/base/special/boxcox1pinv]: https://github.com/stdlib-js/math-base-special-boxcox1pinv
 
 <!-- </related-links> -->
 
