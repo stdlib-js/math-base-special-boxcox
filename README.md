@@ -65,7 +65,7 @@ The one-parameter [Box-Cox transformation][box-cox-transformation] is defined as
 To use in Observable,
 
 ```javascript
-boxcox = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@umd/browser.js' )
+boxcox = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@v0.3.1-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -77,7 +77,7 @@ var boxcox = require( 'path/to/vendor/umd/math-base-special-boxcox/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@v0.3.1-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -131,7 +131,7 @@ v = boxcox( 0.0, -1.0 );
 <html lang="en">
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-incrspace@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-boxcox@v0.3.1-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
